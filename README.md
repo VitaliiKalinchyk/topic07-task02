@@ -27,8 +27,7 @@ Proceed to `DBManager` class and implement its methods:
 * `List<User> findAllUsers` returns a list of all users;
 * `insertTeam(Team)` inserts a `team` into the `teams` table; this method modifies the id of a `team`, if a `team` has been inserted;
 * `List<Team> findAllTeams` returns a list of all teams;
-* `void setTeamsForUser(User, Team...)` should be implemented using a transaction: as a result of calling this method, the user will be assigned either all groups or none.  
-If the method is called like this:
+* `void setTeamsForUser(User, Team...)` should be implemented using a transaction: as a result of calling this method, the user will be assigned either all groups or none. If the method is called like this:
     ```
     setTeamsForUser (user, teamA, teamB, teamC)
     ```
