@@ -1,7 +1,7 @@
 # JDBC transactions
  
-The purpose of this exercise is to train you to work with JDBC API.  
-Estimated workload is *40 min*.
+The purpose of this exercise is to train you to work with the JDBC API.  
+The estimated workload is *40 min*.
 
 ## Description
 
@@ -27,7 +27,8 @@ Proceed to `DBManager` class and implement its methods:
 * `List<User> findAllUsers` returns a list of all users;
 * `insertTeam(Team)` inserts a `team` into the `teams` table; this method modifies the id of a `team`, if a `team` has been inserted;
 * `List<Team> findAllTeams` returns a list of all teams;
-* `void setTeamsForUser(User, Team...)` should be implemented using a transaction: as a result of calling this method, the user will be assigned either all groups or none. If the method is called like this:
+* `void setTeamsForUser(User, Team...)` should be implemented using a transaction: as a result of calling this method, the user will be assigned either all groups or none.  
+If the method is called like this:
     ```
     setTeamsForUser (user, teamA, teamB, teamC)
     ```
@@ -52,11 +53,11 @@ connection.url = jdbc:mysql://localhost:3306/mydb?user=user&password=pswrd
 
 > Do not load the driver class manually (referred to a call to 
 `Class.forName (JDBC-DRIVER-FQN)`
-exclude such line from the code).
+exclude that line from the code).
 
 ***
 
-### Details about database
+### Details about the database
 
 * Use can use any relational database.  
 * The database contains three tables: 
