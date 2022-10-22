@@ -77,7 +77,9 @@ public class DBManager {
 		{
 			ps.setString(1, login);
 			ResultSet resultSet = ps.executeQuery();
-			user.setId(resultSet.getInt(Fields.USER_ID));
+			if (resultSet.next()) {
+				user.setId(resultSet.getInt(Fields.USER_ID));
+			}
 		} catch (SQLException e) {
 			throw new DBException("Couldn't get user from table", e);
 		}
@@ -153,7 +155,9 @@ public class DBManager {
 		{
 			ps.setString(1, name);
 			ResultSet resultSet = ps.executeQuery();
-			team.setId(resultSet.getInt(Fields.TEAM_ID));
+			if (resultSet.next()) {
+				team.setId(resultSet.getInt(Fields.TEAM_ID));
+			}
 		} catch (SQLException e) {
 			throw new DBException("Couldn't get team from table", e);
 		}
